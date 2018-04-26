@@ -1,7 +1,6 @@
 package com.example.mohamed.popularmovies.fragments;
 
 import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -26,6 +25,8 @@ public class FavoriteMoviesFragment extends Fragment implements FavoriteMoviesAd
     private FavoriteMoviesAdapter adapter;
     private LinearLayoutManager layoutManager;
     private RecyclerView moviesFavoritesRecyclerView;
+    private int State;
+
 
     queryMethods queryMethods = new queryMethods();
 
@@ -49,6 +50,24 @@ public class FavoriteMoviesFragment extends Fragment implements FavoriteMoviesAd
         ((TextView)(getActivity().findViewById(R.id.toolbarTitle))).setText("Favorite Movies");
 
         return root;
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+
+        int firstCompletelyVisibleItemPos = layoutManager.findFirstCompletelyVisibleItemPosition();
+        State = firstCompletelyVisibleItemPos < 0 ? layoutManager.findFirstVisibleItemPosition() : firstCompletelyVisibleItemPos;
+        outState.putInt("State", State);
+    }
+
+    @Override
+    public void onViewStateRestored(Bundle savedInstanceState) {
+        super.onViewStateRestored(savedInstanceState);
+        if (savedInstanceState != null) {
+            State = savedInstanceState.getInt("State");
+            layoutManager.scrollToPosition(State);
+        }
     }
 
     @Override

@@ -32,6 +32,8 @@ public class PopularMoviesFragment extends Fragment
     protected RecyclerView moviesRecyclerView;
     protected MoviesAdapter adapter;
     protected GridLayoutManager layoutManager;
+    private int State;
+
 
     public PopularMoviesFragment() {
         // Required empty public constructor
@@ -75,6 +77,22 @@ public class PopularMoviesFragment extends Fragment
         super.onDetach();
         mListener = null;
     }
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+
+        int firstCompletelyVisibleItemPos = layoutManager.findFirstCompletelyVisibleItemPosition();
+        State = firstCompletelyVisibleItemPos < 0 ? layoutManager.findFirstVisibleItemPosition() : firstCompletelyVisibleItemPos;
+        outState.putInt("State", State);
+    }
+
+    @Override
+    public void onViewStateRestored(Bundle savedInstanceState) {
+        super.onViewStateRestored(savedInstanceState);
+        if (savedInstanceState != null) {
+            State = savedInstanceState.getInt("State");
+        }
+    }
 
     public void LoadPopularMovies(){
 
@@ -92,6 +110,9 @@ public class PopularMoviesFragment extends Fragment
 
                     Log.d("success",Integer.toString(page.getMovies().size()));
                     Log.d("success",Integer.toString(page.getPage()));
+
+                    layoutManager.scrollToPosition(State);
+
 
                 }
             }

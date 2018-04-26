@@ -32,6 +32,8 @@ public class TopRatedFragment extends Fragment
     protected RecyclerView moviesRecyclerView;
     protected MoviesAdapter adapter;
     protected GridLayoutManager layoutManager;
+    private int State;
+
 
     public TopRatedFragment() {
         // Required empty public constructor
@@ -60,7 +62,23 @@ public class TopRatedFragment extends Fragment
     }
 
 
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
 
+        int firstCompletelyVisibleItemPos = layoutManager.findFirstCompletelyVisibleItemPosition();
+        State = firstCompletelyVisibleItemPos < 0 ? layoutManager.findFirstVisibleItemPosition() : firstCompletelyVisibleItemPos;
+        outState.putInt("State", State);
+    }
+
+    @Override
+    public void onViewStateRestored(Bundle savedInstanceState) {
+        super.onViewStateRestored(savedInstanceState);
+        if (savedInstanceState != null) {
+            State = savedInstanceState.getInt("State");
+            layoutManager.scrollToPosition(State);
+        }
+    }
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
@@ -95,6 +113,7 @@ public class TopRatedFragment extends Fragment
 
                     Log.d("success", Integer.toString(page.getPage()));
                     Log.d("success",Integer.toString(page.getMovies().size()));
+                    layoutManager.scrollToPosition(State);
 
                 }
             }
