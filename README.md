@@ -2,13 +2,7 @@
 Application that help recommend popular , top rated movie  aslo can mark movie in favorites to help in get it back in favorites list. supervised by Udacity in Android Developer Nanodegree
 
 ## Screenshots
-<img src="ScreenShots/Screenshot_popular.png" height="640" width="360">  
-<img src="ScreenShots/Screenshot_favorite.png" height="640" width="360">
-<img src="ScreenShots/Screenshot_Details.png" height="640" width="360">
-<img src="ScreenShots/Screenshot_TopRated.png" height="640" width="360">
-<img src="ScreenShots/Screenshot_Details.png" height="640" width="360">
-<img src="ScreenShots/Screenshot_Details_part2.png" height="640" width="360">
-<img src="ScreenShots/Screenshot_Details_part3.png" height="640" width="360">
+<img src="ScreenShots/Screenshot_popular.png" height="640" width="360">  <img src="ScreenShots/Screenshot_favorite.png" height="640" width="360"><img src="ScreenShots/Screenshot_Details.png" height="640" width="360"><img src="ScreenShots/Screenshot_TopRated.png" height="640" width="360"><img src="ScreenShots/Screenshot_Details.png" height="640" width="360"><img src="ScreenShots/Screenshot_Details_part2.png" height="640" width="360"><img src="ScreenShots/Screenshot_Details_part3.png" height="640" width="360">
 
 ## Libraries and SDKs Used
 - [Android Support Libraries](https://developer.android.com/topic/libraries/support-library/packages.html) 
