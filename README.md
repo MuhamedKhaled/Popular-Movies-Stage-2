@@ -14,6 +14,6 @@ Application that help recommend popular , top rated movie  aslo can mark movie i
 - [Material Dialogs](https://github.com/afollestad/material-dialogs)
 - [EllipsizeTextView](https://github.com/dinuscxj/EllipsizeTextView)
 
-## Libraries and SDKs Used
+## Notes
 Get your own API key from [here](https://www.themoviedb.org),And then Make sure to add this line to your API_KEY="your_api_key" in service Generator
 
