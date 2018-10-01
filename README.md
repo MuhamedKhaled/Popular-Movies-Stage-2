@@ -1,5 +1,5 @@
 # PopularMovies
-Application that help recommend popular , top rated movie  aslo can mark movie in favorites to help in get it back in favorites list. supervised by Udacity in Android Developer Nanodegree
+ recommendation App to popular , top rated movies  aslo can add movie to favorites so you can find it in favorites list later. supervised by Udacity in Android Developer Nanodegree
 
 ## Screenshots
 <img src="ScreenShots/Screenshot_popular.png" height="640" width="360">  <img src="ScreenShots/Screenshot_favorite.png" height="640" width="360">  <img src="ScreenShots/Screenshot_Details.png" height="640" width="360">  <img src="ScreenShots/Screenshot_TopRated.png" height="640" width="360">  <img src="ScreenShots/Screenshot_Details2.png" height="640" width="360">  <img src="ScreenShots/Screenshot_Details_part2.png" height="640" width="360">  <img src="ScreenShots/Screenshot_Details_part3.png" height="640" width="360">
