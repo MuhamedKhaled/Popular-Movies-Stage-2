@@ -1,5 +1,5 @@
 # PopularMovies
- recommendation App to popular , top rated movies  aslo can add movie to favorites so you can find it in favorites list later. supervised by Udacity in Android Developer Nanodegree
+app that allow users to discover the most popular movies playing as well as save his favorite movies for later, this app is a fun experiment
 
 ## Screenshots
 <img src="ScreenShots/Screenshot_popular.png" height="640" width="360">  <img src="ScreenShots/Screenshot_favorite.png" height="640" width="360">  <img src="ScreenShots/Screenshot_Details.png" height="640" width="360">  <img src="ScreenShots/Screenshot_TopRated.png" height="640" width="360">  <img src="ScreenShots/Screenshot_Details2.png" height="640" width="360">  <img src="ScreenShots/Screenshot_Details_part2.png" height="640" width="360">  <img src="ScreenShots/Screenshot_Details_part3.png" height="640" width="360">
